@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iVelocityAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iVelocityAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */; };
+		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
+		28D7ACF80DDB3853001CB0EB /* iVelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iVelocityViewController.m */; };
+		BC8909991419B3C6008FC54D /* ivelocity.ym in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.ym */; };
+		BC8909B51419B47B008FC54D /* ivelocity.ym in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.ym */; };
+		BC8909C31419B47B008FC54D /* CmdForeachBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89095F1419B22F008FC54D /* CmdForeachBlock.m */; };
+		BC8909C41419B47B008FC54D /* NameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909601419B22F008FC54D /* NameLevel.m */; };
+		BC8909C51419B47B008FC54D /* Lex.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909611419B22F008FC54D /* Lex.m */; };
+		BC8909C61419B47B008FC54D /* TransLayer.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8909621419B22F008FC54D /* TransLayer.c */; };
+		BC8909C71419B47B008FC54D /* NameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909631419B22F008FC54D /* NameBlock.m */; };
+		BC8909C81419B47B008FC54D /* CmdIfBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909641419B22F008FC54D /* CmdIfBlock.m */; };
+		BC8909C91419B47B008FC54D /* CmdSetBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909651419B22F008FC54D /* CmdSetBlock.m */; };
+		BC8909CA1419B47B008FC54D /* NumberBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909661419B22F008FC54D /* NumberBlock.m */; };
+		BC8909CB1419B47B008FC54D /* ExpSubBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909671419B22F008FC54D /* ExpSubBlock.m */; };
+		BC8909CC1419B47B008FC54D /* ExpAddBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909681419B22F008FC54D /* ExpAddBlock.m */; };
+		BC8909CD1419B47B008FC54D /* iVelocity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909691419B22F008FC54D /* iVelocity.m */; };
+		BC8909CE1419B47B008FC54D /* TextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096A1419B22F008FC54D /* TextBlock.m */; };
+		BC8909CF1419B47B008FC54D /* StatementBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096B1419B22F008FC54D /* StatementBlock.m */; };
+		BC8909DC1419B4CD008FC54D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		BC890AED1419B6A5008FC54D /* iVelocityTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909871419B258008FC54D /* iVelocityTestCase.m */; };
+		BC890AEE1419B6A5008FC54D /* YaccTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909881419B258008FC54D /* YaccTestCase.m */; };
+		BC890AEF1419B6A5008FC54D /* LexTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909891419B258008FC54D /* LexTestCase.m */; };
+		BC890AF01419B6A5008FC54D /* NameLevelTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89098C1419B258008FC54D /* NameLevelTestCase.m */; };
+		BC890AF11419B6AB008FC54D /* libiVelocityLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8909B21419B469008FC54D /* libiVelocityLib.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iVelocityAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVelocityAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iVelocityAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVelocityAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iVelocity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iVelocity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = iVelocityViewController.xib; sourceTree = "<group>"; };
+		28AD733E0D9D9553002E5188 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		28D7ACF60DDB3853001CB0EB /* iVelocityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVelocityViewController.h; sourceTree = "<group>"; };
+		28D7ACF70DDB3853001CB0EB /* iVelocityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iVelocityViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iVelocity_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVelocity_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iVelocity-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iVelocity-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		BC34A8131417AFD200992795 /* LexTestCase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LexTestCase-Info.plist"; sourceTree = "<group>"; };
+		BC89095F1419B22F008FC54D /* CmdForeachBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CmdForeachBlock.m; path = Engine/src/CmdForeachBlock.m; sourceTree = "<group>"; };
+		BC8909601419B22F008FC54D /* NameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameLevel.m; path = Engine/src/NameLevel.m; sourceTree = "<group>"; };
+		BC8909611419B22F008FC54D /* Lex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lex.m; path = Engine/src/Lex.m; sourceTree = "<group>"; };
+		BC8909621419B22F008FC54D /* TransLayer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = TransLayer.c; path = Engine/src/TransLayer.c; sourceTree = "<group>"; };
+		BC8909631419B22F008FC54D /* NameBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameBlock.m; path = Engine/src/NameBlock.m; sourceTree = "<group>"; };
+		BC8909641419B22F008FC54D /* CmdIfBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CmdIfBlock.m; path = Engine/src/CmdIfBlock.m; sourceTree = "<group>"; };
+		BC8909651419B22F008FC54D /* CmdSetBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CmdSetBlock.m; path = Engine/src/CmdSetBlock.m; sourceTree = "<group>"; };
+		BC8909661419B22F008FC54D /* NumberBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NumberBlock.m; path = Engine/src/NumberBlock.m; sourceTree = "<group>"; };
+		BC8909671419B22F008FC54D /* ExpSubBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpSubBlock.m; path = Engine/src/ExpSubBlock.m; sourceTree = "<group>"; };
+		BC8909681419B22F008FC54D /* ExpAddBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpAddBlock.m; path = Engine/src/ExpAddBlock.m; sourceTree = "<group>"; };
+		BC8909691419B22F008FC54D /* iVelocity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iVelocity.m; path = Engine/src/iVelocity.m; sourceTree = "<group>"; };
+		BC89096A1419B22F008FC54D /* TextBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextBlock.m; path = Engine/src/TextBlock.m; sourceTree = "<group>"; };
+		BC89096B1419B22F008FC54D /* StatementBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatementBlock.m; path = Engine/src/StatementBlock.m; sourceTree = "<group>"; };
+		BC8909791419B23D008FC54D /* Lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lex.h; path = Engine/inc/Lex.h; sourceTree = "<group>"; };
+		BC89097A1419B23D008FC54D /* NameBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameBlock.h; path = Engine/inc/NameBlock.h; sourceTree = "<group>"; };
+		BC89097B1419B23D008FC54D /* CoreInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreInterface.h; path = Engine/inc/CoreInterface.h; sourceTree = "<group>"; };
+		BC89097C1419B23D008FC54D /* CmdForeachBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CmdForeachBlock.h; path = Engine/inc/CmdForeachBlock.h; sourceTree = "<group>"; };
+		BC89097D1419B23D008FC54D /* TransLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransLayer.h; path = Engine/inc/TransLayer.h; sourceTree = "<group>"; };
+		BC89097E1419B23D008FC54D /* CmdIfBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CmdIfBlock.h; path = Engine/inc/CmdIfBlock.h; sourceTree = "<group>"; };
+		BC89097F1419B23D008FC54D /* NameLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameLevel.h; path = Engine/inc/NameLevel.h; sourceTree = "<group>"; };
+		BC8909801419B23D008FC54D /* CmdSetBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CmdSetBlock.h; path = Engine/inc/CmdSetBlock.h; sourceTree = "<group>"; };
+		BC8909811419B23D008FC54D /* NumberBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NumberBlock.h; path = Engine/inc/NumberBlock.h; sourceTree = "<group>"; };
+		BC8909821419B23D008FC54D /* TextBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextBlock.h; path = Engine/inc/TextBlock.h; sourceTree = "<group>"; };
+		BC8909831419B23D008FC54D /* ExpSubBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpSubBlock.h; path = Engine/inc/ExpSubBlock.h; sourceTree = "<group>"; };
+		BC8909841419B23D008FC54D /* ExpAddBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpAddBlock.h; path = Engine/inc/ExpAddBlock.h; sourceTree = "<group>"; };
+		BC8909851419B23D008FC54D /* StatementBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatementBlock.h; path = Engine/inc/StatementBlock.h; sourceTree = "<group>"; };
+		BC8909871419B258008FC54D /* iVelocityTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iVelocityTestCase.m; path = Engine/TestCase/iVelocityTestCase.m; sourceTree = "<group>"; };
+		BC8909881419B258008FC54D /* YaccTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YaccTestCase.m; path = Engine/TestCase/YaccTestCase.m; sourceTree = "<group>"; };
+		BC8909891419B258008FC54D /* LexTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LexTestCase.m; path = Engine/TestCase/LexTestCase.m; sourceTree = "<group>"; };
+		BC89098A1419B258008FC54D /* iVelocityTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iVelocityTestCase.h; path = Engine/TestCase/iVelocityTestCase.h; sourceTree = "<group>"; };
+		BC89098B1419B258008FC54D /* YaccTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YaccTestCase.h; path = Engine/TestCase/YaccTestCase.h; sourceTree = "<group>"; };
+		BC89098C1419B258008FC54D /* NameLevelTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameLevelTestCase.m; path = Engine/TestCase/NameLevelTestCase.m; sourceTree = "<group>"; };
+		BC89098D1419B258008FC54D /* NameLevelTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameLevelTestCase.h; path = Engine/TestCase/NameLevelTestCase.h; sourceTree = "<group>"; };
+		BC89098E1419B258008FC54D /* LexTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LexTestCase.h; path = Engine/TestCase/LexTestCase.h; sourceTree = "<group>"; };
+		BC8909931419B273008FC54D /* iVelocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iVelocity.h; path = Engine/iVelocity.h; sourceTree = SOURCE_ROOT; };
+		BC8909981419B3C6008FC54D /* ivelocity.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = ivelocity.ym; path = Engine/rule/ivelocity.ym; sourceTree = "<group>"; };
+		BC8909B21419B469008FC54D /* libiVelocityLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiVelocityLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC890AF11419B6AB008FC54D /* libiVelocityLib.a in Frameworks */,
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC8909B01419B469008FC54D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8909DC1419B4CD008FC54D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BC8909931419B273008FC54D /* iVelocity.h */,
+				1D3623240D0F684500981E51 /* iVelocityAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iVelocityAppDelegate.m */,
+				28D7ACF60DDB3853001CB0EB /* iVelocityViewController.h */,
+				28D7ACF70DDB3853001CB0EB /* iVelocityViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iVelocity.app */,
+				BC8909B21419B469008FC54D /* libiVelocityLib.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				BC8909861419B247008FC54D /* TestCase */,
+				BC34A44614165D4E00992795 /* Engine */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				BC34A8131417AFD200992795 /* LexTestCase-Info.plist */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iVelocity_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				8D1107310486CEB800E47090 /* iVelocity-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC34A44614165D4E00992795 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				BC8909981419B3C6008FC54D /* ivelocity.ym */,
+				BC8909791419B23D008FC54D /* Lex.h */,
+				BC89097A1419B23D008FC54D /* NameBlock.h */,
+				BC89097B1419B23D008FC54D /* CoreInterface.h */,
+				BC89097C1419B23D008FC54D /* CmdForeachBlock.h */,
+				BC89097D1419B23D008FC54D /* TransLayer.h */,
+				BC89097E1419B23D008FC54D /* CmdIfBlock.h */,
+				BC89097F1419B23D008FC54D /* NameLevel.h */,
+				BC8909801419B23D008FC54D /* CmdSetBlock.h */,
+				BC8909811419B23D008FC54D /* NumberBlock.h */,
+				BC8909821419B23D008FC54D /* TextBlock.h */,
+				BC8909831419B23D008FC54D /* ExpSubBlock.h */,
+				BC8909841419B23D008FC54D /* ExpAddBlock.h */,
+				BC8909851419B23D008FC54D /* StatementBlock.h */,
+				BC89095F1419B22F008FC54D /* CmdForeachBlock.m */,
+				BC8909601419B22F008FC54D /* NameLevel.m */,
+				BC8909611419B22F008FC54D /* Lex.m */,
+				BC8909621419B22F008FC54D /* TransLayer.c */,
+				BC8909631419B22F008FC54D /* NameBlock.m */,
+				BC8909641419B22F008FC54D /* CmdIfBlock.m */,
+				BC8909651419B22F008FC54D /* CmdSetBlock.m */,
+				BC8909661419B22F008FC54D /* NumberBlock.m */,
+				BC8909671419B22F008FC54D /* ExpSubBlock.m */,
+				BC8909681419B22F008FC54D /* ExpAddBlock.m */,
+				BC8909691419B22F008FC54D /* iVelocity.m */,
+				BC89096A1419B22F008FC54D /* TextBlock.m */,
+				BC89096B1419B22F008FC54D /* StatementBlock.m */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		BC8909861419B247008FC54D /* TestCase */ = {
+			isa = PBXGroup;
+			children = (
+				BC8909871419B258008FC54D /* iVelocityTestCase.m */,
+				BC8909881419B258008FC54D /* YaccTestCase.m */,
+				BC8909891419B258008FC54D /* LexTestCase.m */,
+				BC89098A1419B258008FC54D /* iVelocityTestCase.h */,
+				BC89098B1419B258008FC54D /* YaccTestCase.h */,
+				BC89098C1419B258008FC54D /* NameLevelTestCase.m */,
+				BC89098D1419B258008FC54D /* NameLevelTestCase.h */,
+				BC89098E1419B258008FC54D /* LexTestCase.h */,
+			);
+			name = TestCase;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BC8909AE1419B469008FC54D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iVelocity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iVelocity" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iVelocity;
+			productName = iVelocity;
+			productReference = 1D6058910D05DD3D006BFB54 /* iVelocity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC8909B11419B469008FC54D /* iVelocityLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC8909D91419B4AF008FC54D /* Build configuration list for PBXNativeTarget "iVelocityLib" */;
+			buildPhases = (
+				BC8909AE1419B469008FC54D /* Headers */,
+				BC8909AF1419B469008FC54D /* Sources */,
+				BC8909B01419B469008FC54D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iVelocityLib;
+			productName = iVelocityLib;
+			productReference = BC8909B21419B469008FC54D /* libiVelocityLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iVelocity" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iVelocity */,
+				BC8909B11419B469008FC54D /* iVelocityLib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
+				2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC890AED1419B6A5008FC54D /* iVelocityTestCase.m in Sources */,
+				BC890AEE1419B6A5008FC54D /* YaccTestCase.m in Sources */,
+				BC890AEF1419B6A5008FC54D /* LexTestCase.m in Sources */,
+				BC890AF01419B6A5008FC54D /* NameLevelTestCase.m in Sources */,
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iVelocityAppDelegate.m in Sources */,
+				28D7ACF80DDB3853001CB0EB /* iVelocityViewController.m in Sources */,
+				BC8909991419B3C6008FC54D /* ivelocity.ym in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC8909AF1419B469008FC54D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC8909B51419B47B008FC54D /* ivelocity.ym in Sources */,
+				BC8909C31419B47B008FC54D /* CmdForeachBlock.m in Sources */,
+				BC8909C41419B47B008FC54D /* NameLevel.m in Sources */,
+				BC8909C51419B47B008FC54D /* Lex.m in Sources */,
+				BC8909C61419B47B008FC54D /* TransLayer.c in Sources */,
+				BC8909C71419B47B008FC54D /* NameBlock.m in Sources */,
+				BC8909C81419B47B008FC54D /* CmdIfBlock.m in Sources */,
+				BC8909C91419B47B008FC54D /* CmdSetBlock.m in Sources */,
+				BC8909CA1419B47B008FC54D /* NumberBlock.m in Sources */,
+				BC8909CB1419B47B008FC54D /* ExpSubBlock.m in Sources */,
+				BC8909CC1419B47B008FC54D /* ExpAddBlock.m in Sources */,
+				BC8909CD1419B47B008FC54D /* iVelocity.m in Sources */,
+				BC8909CE1419B47B008FC54D /* TextBlock.m in Sources */,
+				BC8909CF1419B47B008FC54D /* StatementBlock.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iVelocity_Prefix.pch;
+				INFOPLIST_FILE = "iVelocity-Info.plist";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = iVelocity;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iVelocity_Prefix.pch;
+				INFOPLIST_FILE = "iVelocity-Info.plist";
+				PRODUCT_NAME = iVelocity;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC8909B31419B46A008FC54D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PREBINDING = NO;
+				PRODUCT_NAME = iVelocityLib;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BC8909B41419B46A008FC54D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PREBINDING = NO;
+				PRODUCT_NAME = iVelocityLib;
+				SDKROOT = iphoneos;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				PRELINK_LIBS = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				STANDARD_C_PLUS_PLUS_LIBRARY_TYPE = dynamic;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iVelocity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC8909D91419B4AF008FC54D /* Build configuration list for PBXNativeTarget "iVelocityLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC8909B31419B46A008FC54D /* Debug */,
+				BC8909B41419B46A008FC54D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iVelocity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
