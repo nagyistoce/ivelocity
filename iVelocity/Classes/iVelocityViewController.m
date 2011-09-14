@@ -20,10 +20,11 @@
 #import "iVelocity.h"
 #import "YaccTestCase.h"
 #import "iVelocityTestCase.h"
+#import "JSON.h"
 
 @implementation iVelocityViewController
 
-
+@synthesize webView;
 
 /*
 // The designated initializer. Override to perform setup that is required before the view is loaded.
@@ -36,24 +37,44 @@
 }
 */
 
-
+/*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView {
+- (void)loadView {	
+	}
+*/
+
+
+
+// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+- (void)viewDidLoad {
+    [super viewDidLoad];
 	
 	//[NameLevelTestCase test];
 	//[LexTestCase test];
 	//[YaccTestCase test];
-	[iVelocityTestCase test];
+	//[iVelocityTestCase test];
+	
+	NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb1.html"];
+	
+	[iVelocity initWithFile:@"TestWeb1.html"];
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData1.json"];
+	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
+														   encoding: NSUTF8StringEncoding 
+															  error: nil];
+	NSMutableDictionary *jsonValue = [jsonString JSONValue];
+	NSMutableString *strResult = [[NSMutableString alloc] init];
+	
+	[iVelocity renderBlockWithData:jsonValue 
+					  returnString:strResult];
+	
+	[webView loadHTMLString:strResult baseURL:[NSURL fileURLWithPath:filePath2]];
+	
+	
+	[jsonString release];
+	[strResult release];
+	
 }
 
-
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
 
 
 /*
@@ -78,6 +99,7 @@
 
 
 - (void)dealloc {
+	[webView release];
     [super dealloc];
 }
 
