@@ -63,6 +63,8 @@ NSCharacterSet *nameInternalSet;
 			return nil;
 		}
 		
+		// NSLog(@"name:%@", name);
+		
 		value = [(NSMutableDictionary *)Data valueForKey:name];
 		if (value == nil) {
 			value = [self setLeaf];

@@ -22,7 +22,7 @@
 - (id) initWithText:(NSString *)t
 {
 	if (self = [super init]) {
-		text = [[NSString alloc] initWithString:t];
+		text = [[NSMutableString alloc] initWithString:t];
 	}
 	return self;
 }
@@ -43,6 +43,16 @@
 {
 	[text release];
 	[super dealloc];
+}
+
+- (void) AppendText:(NSString *)aptext
+{
+	[text insertString:aptext atIndex:0];
+}
+
+- (NSString *)getText
+{
+	return text;
 }
 
 @end

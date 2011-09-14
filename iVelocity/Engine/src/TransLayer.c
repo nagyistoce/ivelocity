@@ -27,45 +27,33 @@
 #include "CmdIfBlock.h"
 #include "CmdForeachBlock.h"
 
-Lex				*GlobalLex;
+extern FILE *yyin;
+
+#define INTERNAL_FILE	@"ivelocity.vm"
+
 StatementBlock	*GlobalStatement;
+
+
+void initWithTemplateFile(NSString *filename)
+{
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
+	
+	yyin = fopen([filePath UTF8String], "r");
+}
 
 void initLex(NSString *strTemplate)
 {
-	if (GlobalLex) {
-		[GlobalLex release];
-	}
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:INTERNAL_FILE];
+	FILE *fp = fopen([filePath UTF8String], "w");
+	fprintf(fp, "%s", [strTemplate UTF8String]);
+	fclose(fp);
 	
-	GlobalLex = [[Lex alloc] initWithTemplate:strTemplate];
+	initWithTemplateFile(INTERNAL_FILE);
 }
 
 id getRootStatement()
 {
 	return GlobalStatement;
-}
-
-
-int yylex(int *yylval)
-{
-	if (GlobalLex) {
-		NSMutableString *returnString = [[NSMutableString alloc] init];
-		int res = [GlobalLex getToken:returnString];
-		switch (res) {
-			case NAME:
-			case NUMBER:
-			case TEXT:
-				*yylval = (int)returnString;
-				return res;
-			
-			default:
-				break;
-		}
-		*yylval = 0;
-		[returnString release];
-		return res;
-	}
-	
-	return 0;
 }
 
 int createString(char *text)

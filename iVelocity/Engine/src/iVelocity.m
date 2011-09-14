@@ -27,6 +27,13 @@
 	return res;
 }
 
++ (int) initWithFile:(NSString *)filename
+{
+	initWithTemplateFile(filename);
+	int res = yyparse();
+	return res;
+}
+
 + (void) print 
 {
 	printStatements();
