@@ -15,6 +15,7 @@
  */
 
 #import "iVelocityTestCase.h"
+#import "JSON.h"
 #import "iVelocity.h"
 
 @implementation iVelocityTestCase
@@ -49,11 +50,36 @@
 	[dictionaryData release];
 }
 
+- (void) testRenderHtmlWithJson
+{
+	[iVelocity initWithFile:@"TestWeb1.html"];
+	
+	[iVelocity print];
+	
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData1.json"];
+	
+	NSLog(@"%@", filePath);
+	
+	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
+													 encoding: NSUTF8StringEncoding 
+														error: nil];
+	NSMutableDictionary *jsonValue = [jsonString JSONValue];
+	
+	NSMutableString *strResult = [[NSMutableString alloc] init];
+	
+	[iVelocity renderBlockWithData:jsonValue 
+					  returnString:strResult];
+	
+	NSLog(@"%@", strResult);
+}
+
 + (void) test 
 {
 	iVelocityTestCase *velocityTestCase = [[iVelocityTestCase alloc] init];
 	
-	[velocityTestCase testRender];
+	//[velocityTestCase testRender];
+	
+	[velocityTestCase testRenderHtmlWithJson];
 	
 	[velocityTestCase release];
 }

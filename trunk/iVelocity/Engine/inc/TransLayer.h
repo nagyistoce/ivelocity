@@ -16,12 +16,11 @@
 
 #import <Foundation/Foundation.h>
 
+extern void initWithTemplateFile(NSString *filename);
 extern void initLex(NSString *strTemplate);
 extern id getRootStatement();
 
 extern int yyparse(void);
-
-extern int yylex(int *yylval);
 
 extern int createString(char *text);
 extern void printStatements();

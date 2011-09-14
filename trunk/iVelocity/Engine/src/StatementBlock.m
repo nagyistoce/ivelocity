@@ -15,7 +15,7 @@
  */
 
 #import "StatementBlock.h"
-
+#import "TextBlock.h"
 
 @implementation StatementBlock
 
@@ -30,6 +30,14 @@
 
 - (void) addLeft:(id)block
 {
+	if ([block isKindOfClass:[TextBlock class]]) {
+		id oldblock = [blockArray objectAtIndex:0];
+		if ([oldblock isKindOfClass:[TextBlock class]]) {
+			[oldblock AppendText:[block getText]];
+			[block release];
+			return;
+		}
+	}
 	[blockArray insertObject:block atIndex:0];
 }
 

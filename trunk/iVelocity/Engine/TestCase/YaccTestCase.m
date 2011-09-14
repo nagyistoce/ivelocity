@@ -38,6 +38,7 @@
 	[self print:@"<test1>#if(1)<yes>#else<no>#end</test2>"];
 	[self print:@"<test3>#foreach($a in $b) $a #end</test3>"];
 
+	[self print:@"<test1>color:#202020;$6*6</test1>"];
 }
 
 + (void) test 

@@ -14,6 +14,22 @@
  limitations under the License.
 */
 
+/*
+ == Simple User Guide ==
+ Use:
+	+ (int) initWithTemplate:(NSString *)temp;
+ to load a VTL(velocity template file).
+ 
+ Then generate render result by:
+	+ (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
+							returnString:(NSMutableString *)strResult;
+ the result is return by strResult. and the data is saved or modified in dictionaryData.
+ 
+ If you has confused with the syntax of template file that parsed by iVelocity, can use 
+ print method to print the syntax structure in Console. 
+	+ (void) print;
+ */
+
 #import <Foundation/Foundation.h>
 
 typedef enum {
@@ -25,6 +41,7 @@ typedef enum {
 }
 
 + (int) initWithTemplate:(NSString *)temp;
++ (int) initWithFile:(NSString *)filename;
 + (void) print;
 + (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
 						returnString:(NSMutableString *)strResult;

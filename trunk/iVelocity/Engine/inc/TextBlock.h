@@ -19,9 +19,11 @@
 
 @interface TextBlock : NSObject<Render,Block> {
 
-	NSString *text;
+	NSMutableString *text;
 }
 
 - (id) initWithText:(NSString *)t;
+- (void) AppendText:(NSString *)aptext;
+- (NSString *)getText;
 
 @end
