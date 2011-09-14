@@ -15,11 +15,13 @@
 		2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* iVelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iVelocityViewController.m */; };
-		BC8909991419B3C6008FC54D /* ivelocity.ym in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.ym */; };
-		BC8909B51419B47B008FC54D /* ivelocity.ym in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.ym */; };
+		BC86726E141B1616008F05EB /* ivelocity.l in Sources */ = {isa = PBXBuildFile; fileRef = BC86726D141B1616008F05EB /* ivelocity.l */; };
+		BC86726F141B1616008F05EB /* ivelocity.l in Sources */ = {isa = PBXBuildFile; fileRef = BC86726D141B1616008F05EB /* ivelocity.l */; };
+		BC86728F141B18E8008F05EB /* LexLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BC86728C141B18E8008F05EB /* LexLayer.h */; };
+		BC8909991419B3C6008FC54D /* ivelocity.y in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.y */; };
+		BC8909B51419B47B008FC54D /* ivelocity.y in Sources */ = {isa = PBXBuildFile; fileRef = BC8909981419B3C6008FC54D /* ivelocity.y */; };
 		BC8909C31419B47B008FC54D /* CmdForeachBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89095F1419B22F008FC54D /* CmdForeachBlock.m */; };
 		BC8909C41419B47B008FC54D /* NameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909601419B22F008FC54D /* NameLevel.m */; };
-		BC8909C51419B47B008FC54D /* Lex.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909611419B22F008FC54D /* Lex.m */; };
 		BC8909C61419B47B008FC54D /* TransLayer.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8909621419B22F008FC54D /* TransLayer.c */; };
 		BC8909C71419B47B008FC54D /* NameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909631419B22F008FC54D /* NameBlock.m */; };
 		BC8909C81419B47B008FC54D /* CmdIfBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909641419B22F008FC54D /* CmdIfBlock.m */; };
@@ -33,9 +35,26 @@
 		BC8909DC1419B4CD008FC54D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		BC890AED1419B6A5008FC54D /* iVelocityTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909871419B258008FC54D /* iVelocityTestCase.m */; };
 		BC890AEE1419B6A5008FC54D /* YaccTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909881419B258008FC54D /* YaccTestCase.m */; };
-		BC890AEF1419B6A5008FC54D /* LexTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909891419B258008FC54D /* LexTestCase.m */; };
-		BC890AF01419B6A5008FC54D /* NameLevelTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89098C1419B258008FC54D /* NameLevelTestCase.m */; };
-		BC890AF11419B6AB008FC54D /* libiVelocityLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8909B21419B469008FC54D /* libiVelocityLib.a */; };
+		BC8C7D17141EFDA100009842 /* TestWeb1.html in Resources */ = {isa = PBXBuildFile; fileRef = BC8C7D16141EFDA100009842 /* TestWeb1.html */; };
+		BC8C7D2C141EFF3E00009842 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8C7D21141EFF3E00009842 /* SBJsonWriter.m */; };
+		BC8C7D2D141EFF3E00009842 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8C7D23141EFF3E00009842 /* SBJsonParser.m */; };
+		BC8C7D2E141EFF3E00009842 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8C7D25141EFF3E00009842 /* SBJsonBase.m */; };
+		BC8C7D2F141EFF3E00009842 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8C7D27141EFF3E00009842 /* NSString+SBJSON.m */; };
+		BC8C7D30141EFF3E00009842 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8C7D29141EFF3E00009842 /* NSObject+SBJSON.m */; };
+		BC8C7DD1141F032B00009842 /* TestData1.json in Resources */ = {isa = PBXBuildFile; fileRef = BC8C7D15141EFAC900009842 /* TestData1.json */; };
+		BC8C7DDA141F037400009842 /* CmdForeachBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89095F1419B22F008FC54D /* CmdForeachBlock.m */; };
+		BC8C7DDB141F037400009842 /* NameLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909601419B22F008FC54D /* NameLevel.m */; };
+		BC8C7DDC141F037400009842 /* TransLayer.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8909621419B22F008FC54D /* TransLayer.c */; };
+		BC8C7DDD141F037400009842 /* NameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909631419B22F008FC54D /* NameBlock.m */; };
+		BC8C7DDE141F037400009842 /* CmdIfBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909641419B22F008FC54D /* CmdIfBlock.m */; };
+		BC8C7DDF141F037400009842 /* CmdSetBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909651419B22F008FC54D /* CmdSetBlock.m */; };
+		BC8C7DE0141F037400009842 /* NumberBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909661419B22F008FC54D /* NumberBlock.m */; };
+		BC8C7DE1141F037400009842 /* ExpSubBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909671419B22F008FC54D /* ExpSubBlock.m */; };
+		BC8C7DE2141F037400009842 /* ExpAddBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909681419B22F008FC54D /* ExpAddBlock.m */; };
+		BC8C7DE3141F037400009842 /* iVelocity.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8909691419B22F008FC54D /* iVelocity.m */; };
+		BC8C7DE4141F037400009842 /* TextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096A1419B22F008FC54D /* TextBlock.m */; };
+		BC8C7DE5141F037400009842 /* StatementBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096B1419B22F008FC54D /* StatementBlock.m */; };
+		BC8C7F8B142035BB00009842 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8C7F8A142035BB00009842 /* background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +72,11 @@
 		32CA4F630368D1EE00C91783 /* iVelocity_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVelocity_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iVelocity-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iVelocity-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		BC34A8131417AFD200992795 /* LexTestCase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LexTestCase-Info.plist"; sourceTree = "<group>"; };
+		BC70EB25141A00B50088720F /* INSTALL.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL.TXT; sourceTree = "<group>"; };
+		BC70EB26141A00B50088720F /* README.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
+		BC86726D141B1616008F05EB /* ivelocity.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = ivelocity.l; path = Engine/rule/ivelocity.l; sourceTree = "<group>"; };
+		BC86728C141B18E8008F05EB /* LexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LexLayer.h; sourceTree = "<group>"; };
+		BC86728D141B18E8008F05EB /* LexLayer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LexLayer.c; sourceTree = "<group>"; };
 		BC89095F1419B22F008FC54D /* CmdForeachBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CmdForeachBlock.m; path = Engine/src/CmdForeachBlock.m; sourceTree = "<group>"; };
 		BC8909601419B22F008FC54D /* NameLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NameLevel.m; path = Engine/src/NameLevel.m; sourceTree = "<group>"; };
 		BC8909611419B22F008FC54D /* Lex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lex.m; path = Engine/src/Lex.m; sourceTree = "<group>"; };
@@ -88,8 +112,22 @@
 		BC89098D1419B258008FC54D /* NameLevelTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NameLevelTestCase.h; path = Engine/TestCase/NameLevelTestCase.h; sourceTree = "<group>"; };
 		BC89098E1419B258008FC54D /* LexTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LexTestCase.h; path = Engine/TestCase/LexTestCase.h; sourceTree = "<group>"; };
 		BC8909931419B273008FC54D /* iVelocity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iVelocity.h; path = Engine/iVelocity.h; sourceTree = SOURCE_ROOT; };
-		BC8909981419B3C6008FC54D /* ivelocity.ym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = ivelocity.ym; path = Engine/rule/ivelocity.ym; sourceTree = "<group>"; };
+		BC8909981419B3C6008FC54D /* ivelocity.y */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.yacc; name = ivelocity.y; path = Engine/rule/ivelocity.y; sourceTree = "<group>"; };
 		BC8909B21419B469008FC54D /* libiVelocityLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiVelocityLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC8C7D15141EFAC900009842 /* TestData1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData1.json; sourceTree = "<group>"; };
+		BC8C7D16141EFDA100009842 /* TestWeb1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb1.html; sourceTree = "<group>"; };
+		BC8C7D21141EFF3E00009842 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = JSON/SBJsonWriter.m; sourceTree = "<group>"; };
+		BC8C7D22141EFF3E00009842 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = JSON/SBJsonWriter.h; sourceTree = "<group>"; };
+		BC8C7D23141EFF3E00009842 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = JSON/SBJsonParser.m; sourceTree = "<group>"; };
+		BC8C7D24141EFF3E00009842 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = JSON/SBJsonParser.h; sourceTree = "<group>"; };
+		BC8C7D25141EFF3E00009842 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonBase.m; path = JSON/SBJsonBase.m; sourceTree = "<group>"; };
+		BC8C7D26141EFF3E00009842 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonBase.h; path = JSON/SBJsonBase.h; sourceTree = "<group>"; };
+		BC8C7D27141EFF3E00009842 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+SBJSON.m"; path = "JSON/NSString+SBJSON.m"; sourceTree = "<group>"; };
+		BC8C7D28141EFF3E00009842 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+SBJSON.h"; path = "JSON/NSString+SBJSON.h"; sourceTree = "<group>"; };
+		BC8C7D29141EFF3E00009842 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJSON.m"; path = "JSON/NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		BC8C7D2A141EFF3E00009842 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "JSON/NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		BC8C7D2B141EFF3E00009842 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = JSON/JSON.h; sourceTree = "<group>"; };
+		BC8C7F8A142035BB00009842 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC890AF11419B6AB008FC54D /* libiVelocityLib.a in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
@@ -139,6 +176,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				BC8C7D20141EFF2800009842 /* JSON */,
+				BC867286141B1872008F05EB /* deprecated */,
+				BC70EB24141A009D0088720F /* Document */,
 				BC8909861419B247008FC54D /* TestCase */,
 				BC34A44614165D4E00992795 /* Engine */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -163,9 +203,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BC8C7F8A142035BB00009842 /* background.png */,
+				BC8C7D16141EFDA100009842 /* TestWeb1.html */,
 				2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* iVelocity-Info.plist */,
+				BC8C7D15141EFAC900009842 /* TestData1.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -183,8 +226,8 @@
 		BC34A44614165D4E00992795 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				BC8909981419B3C6008FC54D /* ivelocity.ym */,
-				BC8909791419B23D008FC54D /* Lex.h */,
+				BC86726D141B1616008F05EB /* ivelocity.l */,
+				BC8909981419B3C6008FC54D /* ivelocity.y */,
 				BC89097A1419B23D008FC54D /* NameBlock.h */,
 				BC89097B1419B23D008FC54D /* CoreInterface.h */,
 				BC89097C1419B23D008FC54D /* CmdForeachBlock.h */,
@@ -199,7 +242,6 @@
 				BC8909851419B23D008FC54D /* StatementBlock.h */,
 				BC89095F1419B22F008FC54D /* CmdForeachBlock.m */,
 				BC8909601419B22F008FC54D /* NameLevel.m */,
-				BC8909611419B22F008FC54D /* Lex.m */,
 				BC8909621419B22F008FC54D /* TransLayer.c */,
 				BC8909631419B22F008FC54D /* NameBlock.m */,
 				BC8909641419B22F008FC54D /* CmdIfBlock.m */,
@@ -214,19 +256,57 @@
 			name = Engine;
 			sourceTree = "<group>";
 		};
+		BC70EB24141A009D0088720F /* Document */ = {
+			isa = PBXGroup;
+			children = (
+				BC70EB25141A00B50088720F /* INSTALL.TXT */,
+				BC70EB26141A00B50088720F /* README.TXT */,
+			);
+			name = Document;
+			sourceTree = "<group>";
+		};
+		BC867286141B1872008F05EB /* deprecated */ = {
+			isa = PBXGroup;
+			children = (
+				BC8909791419B23D008FC54D /* Lex.h */,
+				BC8909611419B22F008FC54D /* Lex.m */,
+				BC86728C141B18E8008F05EB /* LexLayer.h */,
+				BC86728D141B18E8008F05EB /* LexLayer.c */,
+				BC8909891419B258008FC54D /* LexTestCase.m */,
+				BC89098C1419B258008FC54D /* NameLevelTestCase.m */,
+				BC89098D1419B258008FC54D /* NameLevelTestCase.h */,
+				BC89098E1419B258008FC54D /* LexTestCase.h */,
+			);
+			name = deprecated;
+			sourceTree = "<group>";
+		};
 		BC8909861419B247008FC54D /* TestCase */ = {
 			isa = PBXGroup;
 			children = (
 				BC8909871419B258008FC54D /* iVelocityTestCase.m */,
 				BC8909881419B258008FC54D /* YaccTestCase.m */,
-				BC8909891419B258008FC54D /* LexTestCase.m */,
 				BC89098A1419B258008FC54D /* iVelocityTestCase.h */,
 				BC89098B1419B258008FC54D /* YaccTestCase.h */,
-				BC89098C1419B258008FC54D /* NameLevelTestCase.m */,
-				BC89098D1419B258008FC54D /* NameLevelTestCase.h */,
-				BC89098E1419B258008FC54D /* LexTestCase.h */,
 			);
 			name = TestCase;
+			sourceTree = "<group>";
+		};
+		BC8C7D20141EFF2800009842 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BC8C7D21141EFF3E00009842 /* SBJsonWriter.m */,
+				BC8C7D22141EFF3E00009842 /* SBJsonWriter.h */,
+				BC8C7D23141EFF3E00009842 /* SBJsonParser.m */,
+				BC8C7D24141EFF3E00009842 /* SBJsonParser.h */,
+				BC8C7D25141EFF3E00009842 /* SBJsonBase.m */,
+				BC8C7D26141EFF3E00009842 /* SBJsonBase.h */,
+				BC8C7D27141EFF3E00009842 /* NSString+SBJSON.m */,
+				BC8C7D28141EFF3E00009842 /* NSString+SBJSON.h */,
+				BC8C7D29141EFF3E00009842 /* NSObject+SBJSON.m */,
+				BC8C7D2A141EFF3E00009842 /* NSObject+SBJSON.h */,
+				BC8C7D2B141EFF3E00009842 /* JSON.h */,
+			);
+			name = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +316,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC86728F141B18E8008F05EB /* LexLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +387,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC8C7DD1141F032B00009842 /* TestData1.json in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */,
+				BC8C7D17141EFDA100009842 /* TestWeb1.html in Resources */,
+				BC8C7F8B142035BB00009842 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +404,28 @@
 			files = (
 				BC890AED1419B6A5008FC54D /* iVelocityTestCase.m in Sources */,
 				BC890AEE1419B6A5008FC54D /* YaccTestCase.m in Sources */,
-				BC890AEF1419B6A5008FC54D /* LexTestCase.m in Sources */,
-				BC890AF01419B6A5008FC54D /* NameLevelTestCase.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iVelocityAppDelegate.m in Sources */,
 				28D7ACF80DDB3853001CB0EB /* iVelocityViewController.m in Sources */,
-				BC8909991419B3C6008FC54D /* ivelocity.ym in Sources */,
+				BC8C7D2C141EFF3E00009842 /* SBJsonWriter.m in Sources */,
+				BC8C7D2D141EFF3E00009842 /* SBJsonParser.m in Sources */,
+				BC8C7D2E141EFF3E00009842 /* SBJsonBase.m in Sources */,
+				BC8C7D2F141EFF3E00009842 /* NSString+SBJSON.m in Sources */,
+				BC8C7D30141EFF3E00009842 /* NSObject+SBJSON.m in Sources */,
+				BC8909991419B3C6008FC54D /* ivelocity.y in Sources */,
+				BC8C7DDA141F037400009842 /* CmdForeachBlock.m in Sources */,
+				BC8C7DDB141F037400009842 /* NameLevel.m in Sources */,
+				BC8C7DDC141F037400009842 /* TransLayer.c in Sources */,
+				BC8C7DDD141F037400009842 /* NameBlock.m in Sources */,
+				BC8C7DDE141F037400009842 /* CmdIfBlock.m in Sources */,
+				BC8C7DDF141F037400009842 /* CmdSetBlock.m in Sources */,
+				BC8C7DE0141F037400009842 /* NumberBlock.m in Sources */,
+				BC8C7DE1141F037400009842 /* ExpSubBlock.m in Sources */,
+				BC8C7DE2141F037400009842 /* ExpAddBlock.m in Sources */,
+				BC8C7DE3141F037400009842 /* iVelocity.m in Sources */,
+				BC8C7DE4141F037400009842 /* TextBlock.m in Sources */,
+				BC8C7DE5141F037400009842 /* StatementBlock.m in Sources */,
+				BC86726E141B1616008F05EB /* ivelocity.l in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,10 +433,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC8909B51419B47B008FC54D /* ivelocity.ym in Sources */,
+				BC8909B51419B47B008FC54D /* ivelocity.y in Sources */,
 				BC8909C31419B47B008FC54D /* CmdForeachBlock.m in Sources */,
 				BC8909C41419B47B008FC54D /* NameLevel.m in Sources */,
-				BC8909C51419B47B008FC54D /* Lex.m in Sources */,
 				BC8909C61419B47B008FC54D /* TransLayer.c in Sources */,
 				BC8909C71419B47B008FC54D /* NameBlock.m in Sources */,
 				BC8909C81419B47B008FC54D /* CmdIfBlock.m in Sources */,
@@ -347,6 +446,7 @@
 				BC8909CD1419B47B008FC54D /* iVelocity.m in Sources */,
 				BC8909CE1419B47B008FC54D /* TextBlock.m in Sources */,
 				BC8909CF1419B47B008FC54D /* StatementBlock.m in Sources */,
+				BC86726F141B1616008F05EB /* ivelocity.l in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
