@@ -53,7 +53,8 @@ NSCharacterSet *nameInternalSet;
 	return value;
 }
 
-- (id)getLeaf:(id)Data
+- (id)getLeaf:(id)Data 
+   autoCreate:(BOOL)autoCreate
 {
 	id value;
 	
@@ -63,13 +64,21 @@ NSCharacterSet *nameInternalSet;
 			return nil;
 		}
 		
-		// NSLog(@"name:%@", name);
+		//NSLog(@"name:%@", name);
 		
 		value = [(NSMutableDictionary *)Data valueForKey:name];
 		if (value == nil) {
+			if (!autoCreate) {
+				return nil;
+			}
 			value = [self setLeaf];
 			[(NSMutableDictionary *)Data setObject:value forKey:name];
+		} else {
+			if (!nextLevel) { //! add this for outer dictionary can hold. by evan. 14.Sep.2011
+				[value retain];
+			}
 		}
+
 	} else {
 		
 		if (![Data isKindOfClass:[NSArray class]]) {
@@ -77,13 +86,23 @@ NSCharacterSet *nameInternalSet;
 		}
 		
 		if (index >= [(NSArray *)Data count]) {
+			if (!autoCreate) {
+				return nil;
+			}
 			value = [self setLeaf];
 			[(NSMutableArray *)Data addObject:value];
 		} else {
 			value = [(NSMutableArray *)Data objectAtIndex:index];
 			if (value == nil) {
+				if (!autoCreate) {
+					return nil;
+				}
 				value = [self setLeaf];
 				[(NSMutableArray *)Data addObject:value];
+			} else {
+				if (!nextLevel) { //! add this for outer dictionary can hold. by evan. 14.Sep.2011
+					[value retain];
+				}
 			}
 		}
 	}
@@ -91,7 +110,7 @@ NSCharacterSet *nameInternalSet;
 	if (!nextLevel) {
 		return value; 
 	} else {
-		return [nextLevel getLeaf:value];
+		return [nextLevel getLeaf:value autoCreate:autoCreate];
 	}
 }
 
@@ -107,6 +126,7 @@ NSCharacterSet *nameInternalSet;
 	
 	if (!nameInternalSet) {
 		nameInternalSet = [NSCharacterSet characterSetWithCharactersInString:@".[]"];
+		[nameInternalSet retain];
 	}
 	
 	unichar t;
@@ -139,6 +159,7 @@ NSCharacterSet *nameInternalSet;
 	}
 	
 	name = [n substringToIndex:offset];
+	[name retain];
 	if (path == PATH_LEVEL_INDEX) {
 		index = [name intValue];
 		offset ++;
@@ -191,6 +212,7 @@ NSCharacterSet *nameInternalSet;
 }
 
 - (void)dealloc {
+	[name release];
 	[nextLevel release];
     [super dealloc];
 }

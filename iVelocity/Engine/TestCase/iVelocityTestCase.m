@@ -24,14 +24,16 @@
 {
 	NSLog(@"START ----- iVelocityTestCase %@ ------\n", test);
 	
-	[iVelocity initWithTemplate:test];
-	[iVelocity print];
+	iVelocity *velocity = [[iVelocity alloc] initWithTemplate:test withKey:test forceFlush:NO];
+	[velocity print];
 	
 	NSMutableString *strResult = [[NSMutableString alloc] init];
 	
-	[iVelocity renderBlockWithData:dictionaryData returnString:strResult];
+	[velocity renderBlockWithData:dictionaryData returnString:strResult];
+	
 	NSLog(@"%@\n", strResult);
 	[strResult release];
+	[velocity release];
 	
 	NSLog(@"END ----- iVelocityTestCase %@ ------\n", test);
 }
@@ -44,7 +46,7 @@
 	   withData:dictionaryData];
 	[self print:@"<test3>#if(1)<yes>#else<no>#end</test3>"
 	   withData:dictionaryData];
-	[self print:@"<test3>#foreach($a in $b) $a #end</test3>"
+	[self print:@"<test3>#foreach ($a in $b) $a #end</test3>"
 	   withData:dictionaryData];
 	
 	[dictionaryData release];
@@ -52,9 +54,9 @@
 
 - (void) testRenderHtmlWithJson
 {
-	[iVelocity initWithFile:@"TestWeb1.html"];
+	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb1.html" forceFlush:YES];
 	
-	[iVelocity print];
+	[velocity print];
 	
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData1.json"];
 	
@@ -67,19 +69,21 @@
 	
 	NSMutableString *strResult = [[NSMutableString alloc] init];
 	
-	[iVelocity renderBlockWithData:jsonValue 
+	[velocity renderBlockWithData:jsonValue 
 					  returnString:strResult];
 	
 	NSLog(@"%@", strResult);
+	
+	[velocity release];
 }
 
 + (void) test 
 {
 	iVelocityTestCase *velocityTestCase = [[iVelocityTestCase alloc] init];
 	
-	//[velocityTestCase testRender];
+	[velocityTestCase testRender];
 	
-	[velocityTestCase testRenderHtmlWithJson];
+	//[velocityTestCase testRenderHtmlWithJson];
 	
 	[velocityTestCase release];
 }

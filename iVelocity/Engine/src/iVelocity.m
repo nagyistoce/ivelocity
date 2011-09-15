@@ -17,34 +17,91 @@
 #import "iVelocity.h"
 #import "TransLayer.h"
 #import "StatementBlock.h"
+#import "LocalCache.h"
 
 @implementation iVelocity
 
-+ (int) initWithTemplate:(NSString *)temp
+- (id) initWithTemplate:(NSString *)temp
+				withKey:(NSString *)key 
+			 forceFlush:(BOOL)mustflush
 {
-	initLex(temp);
-	int res = yyparse();
-	return res;
+	self = [super init];
+	if (self) {
+		_isParsed = NO;
+		_localCache = [LocalCache createAndGetLocalCache:key forceFlush:mustflush];
+		LocalCache *lc = (LocalCache *)_localCache;
+		if (!lc.statementCache) {
+			initLex(temp, _localCache);
+			int res = yyparse();
+			if (res) {
+				NSLog(@"Parse error!");
+			} else {
+				_isParsed = YES;
+			}
+		} else {
+			_isParsed = YES;
+		}
+
+	}
+	return self;
 }
 
-+ (int) initWithFile:(NSString *)filename
+- (id) initWithFile:(NSString *)filename
+		 forceFlush:(BOOL)mustflush
 {
-	initWithTemplateFile(filename);
-	int res = yyparse();
-	return res;
+	self = [super init];
+	if (self) {
+		_isParsed = NO;
+		_localCache = [LocalCache createAndGetLocalCache:filename forceFlush:mustflush];
+		LocalCache *lc = (LocalCache *)_localCache;
+		if (!lc.statementCache) {
+			initWithTemplateFile(filename, _localCache);
+			int res = yyparse();
+			if (res) {
+				NSLog(@"Parse error!");
+			} else {
+				_isParsed = YES;
+			}
+		} else {
+			_isParsed = YES;
+		}
+
+	}
+	return self;
 }
 
-+ (void) print 
+- (void) print 
 {
-	printStatements();
+	if(_isParsed) {
+		printStatements();
+	}
 }
 
-+ (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
+- (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
 						returnString:(NSMutableString *)strResult
 {
-	StatementBlock *block = getRootStatement();
-	return [block renderBlockWithData:dictionaryData 
-						 returnString:strResult];
+	if (_isParsed) {
+		LocalCache *lc = (LocalCache *)_localCache;
+		
+		[lc initWithDictionary:dictionaryData];
+		
+		StatementBlock *block = lc.statementCache;
+		return [block renderBlockWithData:dictionaryData 
+							 returnString:strResult];
+	} else {
+		return RENDER_ERROR;
+	}
+
+}
+
++ (NSString *) version
+{
+	return @"0.3";
+}
+
+- (void)dealloc
+{
+	[super dealloc];
 }
 
 @end

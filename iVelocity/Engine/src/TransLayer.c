@@ -26,34 +26,32 @@
 #include "Lex.h"
 #include "CmdIfBlock.h"
 #include "CmdForeachBlock.h"
+#include "LocalCache.h"
 
 extern FILE *yyin;
 
 #define INTERNAL_FILE	@"ivelocity.vm"
 
-StatementBlock	*GlobalStatement;
+//StatementBlock	*GlobalStatement;
+LocalCache	*currentLocalCache;
 
-
-void initWithTemplateFile(NSString *filename)
+void initWithTemplateFile(NSString *filename, id iv)
 {
+	currentLocalCache = (LocalCache *)iv;
+	
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
 	
 	yyin = fopen([filePath UTF8String], "r");
 }
 
-void initLex(NSString *strTemplate)
+void initLex(NSString *strTemplate, id iv)
 {
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:INTERNAL_FILE];
 	FILE *fp = fopen([filePath UTF8String], "w");
 	fprintf(fp, "%s", [strTemplate UTF8String]);
 	fclose(fp);
 	
-	initWithTemplateFile(INTERNAL_FILE);
-}
-
-id getRootStatement()
-{
-	return GlobalStatement;
+	initWithTemplateFile(INTERNAL_FILE, iv);
 }
 
 int createString(char *text)
@@ -64,15 +62,19 @@ int createString(char *text)
 
 void printStatements()
 {
-	[GlobalStatement print:@"-"];
+	StatementBlock *entry = currentLocalCache.statementCache;
+	if (entry) {
+		[entry print:@"-"];
+	}
 }
 
 int createEntry(int pStatement)
 {
-	if (GlobalStatement) {
-		[GlobalStatement release];
+	StatementBlock *entry = currentLocalCache.statementCache;
+	if (entry) {
+		[entry release];
 	}
-	GlobalStatement = (StatementBlock *)pStatement;
+	currentLocalCache.statementCache = (StatementBlock *)pStatement;
 	return pStatement;
 }
 
@@ -105,7 +107,22 @@ int createNameBlock(int pName)
 {
 	NSString *text = (NSString *)pName;
 	
-	NameBlock *block = [NameBlock createNameBlock:text];
+	NSMutableDictionary *nameBlockCache = currentLocalCache.nameCache;
+	
+	if (!nameBlockCache) {
+		nameBlockCache = [[NSMutableDictionary alloc]init];
+		currentLocalCache.nameCache = nameBlockCache;
+	}
+	
+	NameBlock *block = [nameBlockCache valueForKey:text];
+	
+	if (!block) {
+		block = [[NameBlock alloc] initWithName:text];
+		
+		[nameBlockCache setObject:block forKey:text];
+		
+		[block release];
+	}
 	
 	[text release];
 	
