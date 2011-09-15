@@ -16,6 +16,7 @@
 
 #import "YaccTestCase.h"
 #import "TransLayer.h"
+#import "LocalCache.h"
 
 @implementation YaccTestCase
 
@@ -23,13 +24,17 @@
 {
 	NSLog(@"START ----- YaccTestCase %@ ------\n", test);
 	
-	initLex(test);
+	LocalCache *lc = [[LocalCache alloc] init];
+	
+	initLex(test, lc);
 	int res = yyparse();
 	if (res == 0) {
 		printStatements();
 	}
 	
 	NSLog(@"END ----- YaccTestCase %@ ------\n", test);
+	
+	[lc release];
 }
 
 - (void) testParse

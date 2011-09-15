@@ -15,20 +15,19 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "CoreInterface.h"
-#import "NameLevel.h"
+#import "NameBlock.h"
+#import "StatementBlock.h"
 
-@interface NameBlock : NSObject<Render, Expression, Name,Block> {
-
-	ValueType valueType; //! set when runtime.
-	id value;			 //! set when runtime.
-	NSString *name;		 //! set when runtime.
-	
-	NameLevel *nameLevel;
+@interface LocalCache : NSObject {
+	NSMutableDictionary	*nameCache;
+	StatementBlock		*statementCache;
 }
 
-+ (ValueType)checkValueType:(id)value;
-- (void) initNameWithData:(NSMutableDictionary *)dictionaryData;
-- (void) reset;
+@property(nonatomic, retain) NSMutableDictionary	*nameCache;
+@property(nonatomic, retain) StatementBlock			*statementCache;
+
++ (id) createAndGetLocalCache:(NSString *)key 
+				   forceFlush:(BOOL)mustflush;
+- (void) initWithDictionary:(NSMutableDictionary *)dic;
 
 @end

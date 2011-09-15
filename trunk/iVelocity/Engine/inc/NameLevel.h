@@ -37,7 +37,7 @@ typedef enum {				//! for example, a.b[2].c	d.e[3]
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, assign) NameLevel *nextLevel;
 
-- (id)getLeaf:(id)Data;
+- (id)getLeaf:(id)Data autoCreate:(BOOL)autoCreate;
 
 - (id)initWithName:(NSString *)n withPath:(PathLevelType)p;
 

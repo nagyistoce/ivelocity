@@ -55,6 +55,11 @@
 		BC8C7DE4141F037400009842 /* TextBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096A1419B22F008FC54D /* TextBlock.m */; };
 		BC8C7DE5141F037400009842 /* StatementBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC89096B1419B22F008FC54D /* StatementBlock.m */; };
 		BC8C7F8B142035BB00009842 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8C7F8A142035BB00009842 /* background.png */; };
+		BCAAA9571421964F00C83895 /* LocalCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAAA9551421964F00C83895 /* LocalCache.h */; };
+		BCAAA9581421964F00C83895 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA9561421964F00C83895 /* LocalCache.m */; };
+		BCAAA9591421964F00C83895 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA9561421964F00C83895 /* LocalCache.m */; };
+		BCFC081214209D0400FE1554 /* TestWeb2.html in Resources */ = {isa = PBXBuildFile; fileRef = BCFC081114209D0400FE1554 /* TestWeb2.html */; };
+		BCFC082A14209E6000FE1554 /* TestData2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCFC081714209DA200FE1554 /* TestData2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +133,11 @@
 		BC8C7D2A141EFF3E00009842 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJSON.h"; path = "JSON/NSObject+SBJSON.h"; sourceTree = "<group>"; };
 		BC8C7D2B141EFF3E00009842 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = JSON/JSON.h; sourceTree = "<group>"; };
 		BC8C7F8A142035BB00009842 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		BCAAA90D14218AEF00C83895 /* CHANGELOG.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.TXT; sourceTree = "<group>"; };
+		BCAAA9551421964F00C83895 /* LocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCache.h; sourceTree = "<group>"; };
+		BCAAA9561421964F00C83895 /* LocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCache.m; sourceTree = "<group>"; };
+		BCFC081114209D0400FE1554 /* TestWeb2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb2.html; sourceTree = "<group>"; };
+		BCFC081714209DA200FE1554 /* TestData2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData2.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,12 +213,14 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BCFC081114209D0400FE1554 /* TestWeb2.html */,
 				BC8C7F8A142035BB00009842 /* background.png */,
 				BC8C7D16141EFDA100009842 /* TestWeb1.html */,
 				2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* iVelocity-Info.plist */,
 				BC8C7D15141EFAC900009842 /* TestData1.json */,
+				BCFC081714209DA200FE1554 /* TestData2.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -252,6 +264,8 @@
 				BC8909691419B22F008FC54D /* iVelocity.m */,
 				BC89096A1419B22F008FC54D /* TextBlock.m */,
 				BC89096B1419B22F008FC54D /* StatementBlock.m */,
+				BCAAA9551421964F00C83895 /* LocalCache.h */,
+				BCAAA9561421964F00C83895 /* LocalCache.m */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -261,6 +275,7 @@
 			children = (
 				BC70EB25141A00B50088720F /* INSTALL.TXT */,
 				BC70EB26141A00B50088720F /* README.TXT */,
+				BCAAA90D14218AEF00C83895 /* CHANGELOG.TXT */,
 			);
 			name = Document;
 			sourceTree = "<group>";
@@ -317,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC86728F141B18E8008F05EB /* LexLayer.h in Headers */,
+				BCAAA9571421964F00C83895 /* LocalCache.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,11 +403,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCFC082A14209E6000FE1554 /* TestData2.json in Resources */,
 				BC8C7DD1141F032B00009842 /* TestData1.json in Resources */,
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */,
 				BC8C7D17141EFDA100009842 /* TestWeb1.html in Resources */,
 				BC8C7F8B142035BB00009842 /* background.png in Resources */,
+				BCFC081214209D0400FE1554 /* TestWeb2.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +444,7 @@
 				BC8C7DE4141F037400009842 /* TextBlock.m in Sources */,
 				BC8C7DE5141F037400009842 /* StatementBlock.m in Sources */,
 				BC86726E141B1616008F05EB /* ivelocity.l in Sources */,
+				BCAAA9591421964F00C83895 /* LocalCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +466,7 @@
 				BC8909CE1419B47B008FC54D /* TextBlock.m in Sources */,
 				BC8909CF1419B47B008FC54D /* StatementBlock.m in Sources */,
 				BC86726F141B1616008F05EB /* ivelocity.l in Sources */,
+				BCAAA9581421964F00C83895 /* LocalCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,12 +38,23 @@ typedef enum {
 } RenderStatus;
 
 @interface iVelocity : NSObject {
+@private
+	id	_localCache;
+	BOOL _isParsed;
 }
 
-+ (int) initWithTemplate:(NSString *)temp;
-+ (int) initWithFile:(NSString *)filename;
-+ (void) print;
-+ (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
++ (NSString *) version;
+
+- (id) initWithTemplate:(NSString *)temp 
+				 withKey:(NSString *)key 
+			  forceFlush:(BOOL)mustflush;
+
+- (id) initWithFile:(NSString *)filename
+		  forceFlush:(BOOL)mustflush;
+
+- (void) print;
+
+- (RenderStatus) renderBlockWithData:(NSMutableDictionary *)dictionaryData 
 						returnString:(NSMutableString *)strResult;
 
 @end

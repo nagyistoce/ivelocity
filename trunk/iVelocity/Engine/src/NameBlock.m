@@ -58,20 +58,35 @@ NSMutableDictionary *GlobaNameDic;
 
 - (void) initNameWithData:(NSMutableDictionary *)dictionaryData 
 {
-	if (!value) { //! dont't repeat init
-		value = [nameLevel getLeaf:dictionaryData];
+	if (value) {
+		id newValue = [nameLevel getLeaf:dictionaryData autoCreate:NO];
 		
-		if (value == nil) {
-			//! for invalid name, create internal data for use.
-			value = [[[NSMutableString alloc] init] autorelease];
-			valueType = VALUE_STRING;
+		if (newValue) {
+			//! replace old value
+			
+			[value release];
+			
+			value = newValue;
+			
+			[value retain];
+			
 			return;
+		} else {
+			
+			return; //! use old value.
 		}
-		
-		valueType = [NameBlock checkValueType:value];
-		
+	} 
+	
+	value = [nameLevel getLeaf:dictionaryData autoCreate:YES];
+	
+	if (value == nil) {
+		//! for invalid name, create internal data for use.
+		value = [[[NSMutableString alloc] init] autorelease];
+		valueType = VALUE_STRING;
 		return;
 	}
+	
+	valueType = [NameBlock checkValueType:value];
 }
 
 - (ValueType) getValueType
@@ -86,9 +101,7 @@ NSMutableDictionary *GlobaNameDic;
 
 - (RenderStatus)renderBlockWithData:(NSMutableDictionary *)dictionaryData 
 					   returnString:(NSMutableString *)strResult;
-{
-	[self initNameWithData:dictionaryData];
-	
+{	
 	if ([self getValueType] == VALUE_STRING) {
 		[strResult appendString:value];
 	}
@@ -159,28 +172,15 @@ NSMutableDictionary *GlobaNameDic;
 	[super dealloc];
 }
 
-+ (NameBlock *) createNameBlock:(NSString *) n
-{
-	if (!GlobaNameDic) {
-		GlobaNameDic = [[NSMutableDictionary alloc]init];
-	}
-	
-	NameBlock *block = [GlobaNameDic valueForKey:n];
-	
-	if (!block) {
-		block = [[NameBlock alloc] initWithName:n];
-		
-		[GlobaNameDic setObject:block forKey:n];
-		
-		[block release];
-	}
-	
-	return block;
-}
-
 - (id) getObject
 {
 	return value;
+}
+
+- (void) reset
+{
+	[value release];
+	value = nil;
 }
 
 @end

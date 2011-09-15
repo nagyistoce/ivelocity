@@ -16,9 +16,8 @@
 
 #import <Foundation/Foundation.h>
 
-extern void initWithTemplateFile(NSString *filename);
-extern void initLex(NSString *strTemplate);
-extern id getRootStatement();
+extern void initWithTemplateFile(NSString *filename, id iv);
+extern void initLex(NSString *strTemplate, id iv);
 
 extern int yyparse(void);
 
