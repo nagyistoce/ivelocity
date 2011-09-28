@@ -45,12 +45,14 @@ typedef enum {
 
 + (NSString *) version;
 
-- (id) initWithTemplate:(NSString *)temp 
-				 withKey:(NSString *)key 
-			  forceFlush:(BOOL)mustflush;
+- (id) initWithTemplate:(NSString *)temp // VTL String
+				 withKey:(NSString *)key // VTL String Name, used for cache.
+			  forceFlush:(BOOL)mustflush;// YES: parse the VTL even if cache match!
+										// NO: used the cached object if match.
 
-- (id) initWithFile:(NSString *)filename
-		  forceFlush:(BOOL)mustflush;
+- (id) initWithFile:(NSString *)filename// xxx.vm file that support VTL
+		  forceFlush:(BOOL)mustflush;	// YES: parse the VTL even if cache match!
+										// NO: used the cached object if match.
 
 - (void) print;
 
