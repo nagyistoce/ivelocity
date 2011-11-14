@@ -1,0 +1,27 @@
+	{
+        "basic_info": {
+            "business_type": "",
+            "employees_num": "101 - 500 People",
+            "product_service": "Electronic products,Jewelry,Tablet PC"
+        },
+        "company_profile": {
+            "company_name": "IVelocity Test Company.",
+            "service_type": "iOS Service [1st]",
+            "year_oem": "0"
+        },
+        "entityType": "Minisite",
+        "factory_info": null,
+        "id": 0,
+        "lastUpdate": 0,
+        "trade_market": [
+            "North America",
+            "South America",
+            "Eastern Europe",
+            "Southeast Asia",
+            "Africa",
+            "Oceania",
+            "Mid East",
+            "Eastern Asia",
+            "Western Europe"
+        ]
+    }

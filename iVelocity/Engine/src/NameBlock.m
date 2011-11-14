@@ -58,6 +58,10 @@ NSMutableDictionary *GlobaNameDic;
 
 - (void) initNameWithData:(NSMutableDictionary *)dictionaryData 
 {
+	/*if ([name compare:@"factory_info.factory_size"] == 0) {
+		NSLog(@"break here");
+	}*/
+	
 	if (value) {
 		id newValue = [nameLevel getLeaf:dictionaryData autoCreate:NO];
 		
@@ -181,6 +185,13 @@ NSMutableDictionary *GlobaNameDic;
 {
 	[value release];
 	value = nil;
+	/*
+	ValueType type = [NameBlock checkValueType:value];
+	if (type != VALUE_ANY) {
+		[value release];
+		value = nil;
+	}
+	 */
 }
 
 @end
