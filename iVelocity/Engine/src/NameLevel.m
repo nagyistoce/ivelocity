@@ -67,7 +67,10 @@ NSCharacterSet *nameInternalSet;
 		//NSLog(@"name:%@", name);
 		
 		value = [(NSMutableDictionary *)Data valueForKey:name];
-		if (value == nil) {
+		
+		//! fix bug here! 2011-11-14
+		//!		must check NSNull
+		if ((value == nil) || ([value isKindOfClass:[NSNull class]])) { 
 			if (!autoCreate) {
 				return nil;
 			}
