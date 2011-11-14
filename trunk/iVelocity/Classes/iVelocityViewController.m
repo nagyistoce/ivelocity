@@ -54,7 +54,7 @@
 	//[YaccTestCase test];
 	//[iVelocityTestCase test];
 	
-	
+	/*
 	NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb1.html"];
 	
 	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb1.html" forceFlush:YES];
@@ -74,7 +74,7 @@
 	[jsonString release];
 	[strResult release];
 	[velocity release];
-	
+	*/
 	/*
 	NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb2.html"];
 	
@@ -96,6 +96,32 @@
 	[strResult release];
 	[velocity release];
 	 */
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    
+	NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb3.html"];
+	
+	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb3.html" forceFlush:YES];
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData3.json"];
+	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
+														   encoding: NSUTF8StringEncoding 
+															  error: nil];
+	NSMutableDictionary *jsonValue = [jsonString JSONValue];
+	NSMutableString *strResult = [[NSMutableString alloc] init];
+	
+	[velocity renderBlockWithData:jsonValue 
+					 returnString:strResult];
+	
+	[webView loadHTMLString:strResult baseURL:[NSURL fileURLWithPath:filePath2]];
+	
+	[pool release];
+    
+	//! test null
+	iVelocity *velocity2 = [[iVelocity alloc] initWithFile:@"TestWeb3.html" forceFlush:NO];
+
+	
+	[jsonString release];
+	[strResult release];
+	[velocity release];
 }
 
 
