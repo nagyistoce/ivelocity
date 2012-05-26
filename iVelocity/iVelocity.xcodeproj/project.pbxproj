@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		2899E5220DE3E06400AC0155 /* iVelocityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2899E5210DE3E06400AC0155 /* iVelocityViewController.xib */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* iVelocityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* iVelocityViewController.m */; };
+		BC41F84E157037FE006B8CC7 /* TestData4.json in Resources */ = {isa = PBXBuildFile; fileRef = BC41F84D157037FE006B8CC7 /* TestData4.json */; };
+		BC41F85015703887006B8CC7 /* TestWeb4.html in Resources */ = {isa = PBXBuildFile; fileRef = BC41F84F15703887006B8CC7 /* TestWeb4.html */; };
 		BC752F2B1470C8EB00B5C858 /* TestData3.json in Resources */ = {isa = PBXBuildFile; fileRef = BC752EAF1470C6E300B5C858 /* TestData3.json */; };
 		BC752F2C1470C8EE00B5C858 /* TestWeb3.html in Resources */ = {isa = PBXBuildFile; fileRef = BC752EB01470C70700B5C858 /* TestWeb3.html */; };
 		BC86726E141B1616008F05EB /* ivelocity.l in Sources */ = {isa = PBXBuildFile; fileRef = BC86726D141B1616008F05EB /* ivelocity.l */; };
@@ -79,6 +81,8 @@
 		32CA4F630368D1EE00C91783 /* iVelocity_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iVelocity_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* iVelocity-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iVelocity-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		BC34A8131417AFD200992795 /* LexTestCase-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LexTestCase-Info.plist"; sourceTree = "<group>"; };
+		BC41F84D157037FE006B8CC7 /* TestData4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData4.json; sourceTree = "<group>"; };
+		BC41F84F15703887006B8CC7 /* TestWeb4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb4.html; sourceTree = "<group>"; };
 		BC70EB25141A00B50088720F /* INSTALL.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = INSTALL.TXT; sourceTree = "<group>"; };
 		BC70EB26141A00B50088720F /* README.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
 		BC752EAF1470C6E300B5C858 /* TestData3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData3.json; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				8D1107310486CEB800E47090 /* iVelocity-Info.plist */,
 				BC8C7D15141EFAC900009842 /* TestData1.json */,
 				BCFC081714209DA200FE1554 /* TestData2.json */,
+				BC41F84D157037FE006B8CC7 /* TestData4.json */,
+				BC41F84F15703887006B8CC7 /* TestWeb4.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -386,8 +392,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iVelocity" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -420,6 +429,8 @@
 				BC8C7D17141EFDA100009842 /* TestWeb1.html in Resources */,
 				BC8C7F8B142035BB00009842 /* background.png in Resources */,
 				BCFC081214209D0400FE1554 /* TestWeb2.html in Resources */,
+				BC41F84E157037FE006B8CC7 /* TestData4.json in Resources */,
+				BC41F85015703887006B8CC7 /* TestWeb4.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,7 +529,6 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				PREBINDING = NO;
 				PRODUCT_NAME = iVelocityLib;
 				SDKROOT = iphoneos;
 			};
@@ -530,8 +540,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				PREBINDING = NO;
 				PRODUCT_NAME = iVelocityLib;
 				SDKROOT = iphoneos;
 				ZERO_LINK = NO;
@@ -548,7 +556,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_LDFLAGS = "";
-				PREBINDING = NO;
 				PRELINK_LIBS = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -565,7 +572,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PREBINDING = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Release;

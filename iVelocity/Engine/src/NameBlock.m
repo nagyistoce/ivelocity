@@ -106,6 +106,8 @@ NSMutableDictionary *GlobaNameDic;
 - (RenderStatus)renderBlockWithData:(NSMutableDictionary *)dictionaryData 
 					   returnString:(NSMutableString *)strResult;
 {	
+    [self initNameWithData:dictionaryData];
+    
 	if ([self getValueType] == VALUE_STRING) {
 		[strResult appendString:value];
 	}
@@ -169,6 +171,12 @@ NSMutableDictionary *GlobaNameDic;
 	}
 }
 
+- (void) setDictionary:(NSDictionary *) v
+{
+    // BUGFIX: use prefix but not whole text!!! by evan joe 2012.5.25
+    [value setDictionary:v];
+}
+
 - (void)dealloc
 {
 	[name release];
@@ -192,6 +200,11 @@ NSMutableDictionary *GlobaNameDic;
 		value = nil;
 	}
 	 */
+}
+
+- (NSString *) getNamePrefix
+{
+    return nameLevel.name;
 }
 
 @end

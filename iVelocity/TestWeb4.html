@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, width=device-width">
+                
+                <style>
+                    html { -webkit-text-size-adjust:none;}
+                    *{margin:0;padding:0}
+                    body{margin:10px;font-family:"Helvetica Neue";}
+                    .bg{background:url('background.png')}
+                    
+                    .panel {
+                        box-sizing: border-box;
+                        -moz-box-sizing: border-box;
+                        -webkit-box-sizing: border-box;
+                        padding: 2px;
+                    }
+                    
+                    .panel h2 {
+                        margin: 0 0 8px 14px;
+                        font-size: inherit;
+                        font-weight: bold;
+                        color: #4d4d70;
+                        text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 0;
+                    }
+                    
+                    .panel fieldset {
+                        position: relative;
+                        margin: 0 0 20px 0;
+                        padding: 0;
+                        background: #FFFFFF;
+                        -webkit-border-radius: 10px;
+                        -moz-border-radius: 10px;
+                        border: 1px solid #999999;
+                        font-size: 16px;
+                    }
+                    
+                    .buttonlink {
+                        /*border:1px solid #00ff00; /*green block */
+                        display: block;
+                        margin-right: 0px;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                        padding-left: 6px;
+                        padding-right: 6px;
+                        text-decoration: none;
+                        color: inherit;
+                        border-bottom: 1px solid #999999;
+                    }
+                    
+                    .buttonlink:last-child {
+                        border-bottom: none !important;
+                    }
+                    
+                    .row  {
+                        /*border:1px solid #ff0000; /*red block*/
+                        margin-left: 8px;
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                        display:block;
+                        overflow: auto;
+                        min-height: 42px;
+                        border-bottom: 1px solid #999999;
+                        -webkit-border-radius: 0;
+                        color: #000000;
+                    }
+                    
+                    .row:last-child {
+                        border-bottom: none !important;
+                    }
+                    
+                    .title {
+                        /*border:1px solid #ababab;  gery block */
+                        list-style-type:none;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    
+                    .detailText {
+                        /*border:1px solid #ababab; gery block */
+                        list-style-type:none;
+                        text-align: left;
+                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                    
+                    .goldenlogo{
+                        /*border:1px solid #ababab; gery block */
+                        margin-bottom: -4px;
+                        padding-right: 2px;
+                    }
+                    
+                    .propertyName {
+                        float:left;
+                        /*border:1px solid #ababab; gery block */
+                        color: #999999;
+                    }
+                    .propertyHighlight {
+                        float:left;
+                        color: #990000;
+                    }
+                    .propertyHighlight2 {
+                        color: #990000;
+                    }
+                    
+                    .btAddFavorites{
+                        border-radius: 8px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        height: 44px;
+                        line-height: 44px;
+                        border: 1px solid #999999;
+                        background:-webkit-gradient(linear,0% 0%,0% 100%,from(#f9f9f9),to(#d3d3d3));
+                        color: #000000;
+                        margin: 0 0 10px 0;
+                    }
+                    
+                    .btContact{
+                        border-radius: 8px;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: bold;
+                        height: 44px;
+                        line-height: 44px;
+                        border: 1px solid #f29722;
+                        background:-webkit-gradient(linear,0% 0%,0% 100%,from(#ffffd3),to(#f9cf88));
+                        color: #98370c;
+                        margin: 0 0 10px 0;
+                    }
+                    li.active{background:-webkit-gradient(linear,0% 0%,0% 100%,from(#058bf5),to(#015ee6));border-color:#015ee6;color:#fff}
+                    
+                    a {
+                        display:block;
+                        color: #000;
+                        text-decoration:none;
+                    }
+                    
+                    </style>
+                </head>
+    <body class="bg">
+        <div class="panel">
+            <fieldset>
+                <li class="buttonlink" >
+                    <div class="row">
+                        <li class="title">Shenzhen Sundah Technology</li>
+                        #foreach ($AboutUsLine in $AboutUs)
+                        <li class="detailText">$AboutUsLine.empname</li>
+                        <li class="detailText">$AboutUsLine.emptitle</li>
+                        #end
+                    </div>
+                </li>
+            </fieldset>
+            </body>
+</html>

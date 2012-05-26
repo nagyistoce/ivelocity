@@ -56,6 +56,9 @@ typedef enum {
 - (void) setStringValue:(NSString *) v;
 - (id) getObject;
 
+//! add by EvanJoe 2012.5.25
+- (void) setDictionary:(NSDictionary *) v;
+
 @end
 
 
