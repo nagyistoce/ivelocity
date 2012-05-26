@@ -51,7 +51,7 @@
 {
 	NSArray *keyArray;
 	
-	[name initNameWithData:dictionaryData];
+    [name initNameWithData:dictionaryData];
 	[nameLib initNameWithData:dictionaryData];
 	
 	switch ([nameLib getValueType]) {
@@ -73,11 +73,17 @@
 		
 		switch (type) {
 			case VALUE_STRING:
-				[name setStringValue:value];
+                [name setStringValue:value];
 				break;
 			case VALUE_INTEGER:
-				[name setIntegerValue:[value intValue]];
+                [name setIntegerValue:[value intValue]];
 				break;
+            case VALUE_DIC: 
+                // BUGFIX: use prefix but not whole text!!! by evan joe 2012.5.25
+                [name setDictionary:value];
+                break;
+            case VALUE_ARRAY:
+            case VALUE_ANY:
 			default:
 				return RENDER_ERROR;
 		}

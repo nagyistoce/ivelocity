@@ -119,7 +119,7 @@ int createNameBlock(int pName)
 	if (!block) {
 		block = [[NameBlock alloc] initWithName:text];
 		
-		[nameBlockCache setObject:block forKey:text];
+        [nameBlockCache setObject:block forKey:text];
 		
 		[block release];
 	}

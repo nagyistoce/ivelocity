@@ -31,4 +31,6 @@
 - (void) initNameWithData:(NSMutableDictionary *)dictionaryData;
 - (void) reset;
 
+- (NSString *) getNamePrefix;
+
 @end
