@@ -16,22 +16,25 @@
 
 #import <Foundation/Foundation.h>
 #import "CoreInterface.h"
-#import "NameLevel.h"
 
-@interface NameBlock : NSObject<Render, Expression, Name,Block> {
+typedef enum {
+	COMP_TYPE_DF = 0,	// !=
+	COMP_TYPE_BG,		// >
+	COMP_TYPE_BG_EQ,	// >=
+	COMP_TYPE_EQ,		// ==
+	COMP_TYPE_LT_EQ,	// <=
+	COMP_TYPE_LT		// <
+} COMP_TYPE;
 
-	ValueType valueType; //! set when runtime.
-	id value;			 //! set when runtime.
-	NSString *name;		 //! set when runtime.
+@interface ExpCompBlock : NSObject <Expression,Block> {
 	
-	NameLevel *nameLevel;
+	id			left;
+	COMP_TYPE	type;
+	id			right;
 }
 
-+ (ValueType)checkValueType:(id)value;
-- (id) initWithName:(NSString *)n;
-- (void) initNameWithData:(NSMutableDictionary *)dictionaryData;
-- (void) reset;
-
-- (NSString *) getNamePrefix;
+- (id) initWithLeft:(id)l 
+			 withOp:(COMP_TYPE)t 
+		  withRight:(id)r;
 
 @end

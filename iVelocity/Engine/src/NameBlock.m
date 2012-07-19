@@ -133,10 +133,10 @@ NSMutableDictionary *GlobaNameDic;
 {
 	switch (valueType) {
 		case VALUE_STRING:
-			[strResult initWithString:(NSString *)value];
+			[strResult setString:(NSString *)value];
 			return;
 		case VALUE_INTEGER:
-			[strResult initWithFormat:@"%d", [(NSNumber *)value intValue]];
+			[strResult setString:[NSString  stringWithFormat:@"%d", [(NSNumber *)value intValue]]];
 			return;
 		default:
 			return;

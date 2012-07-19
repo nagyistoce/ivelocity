@@ -18,6 +18,7 @@
 #include "StatementBlock.h"
 #include "TextBlock.h"
 #include "NumberBlock.h"
+#include "StringBlock.h"
 #include "NameBlock.h"
 #include "CoreInterface.h"
 #include "CmdSetBlock.h"
@@ -27,16 +28,24 @@
 #include "CmdIfBlock.h"
 #include "CmdForeachBlock.h"
 #include "LocalCache.h"
+#include "ExpCompBlock.h"
 
 extern FILE *yyin;
+extern int yydebug;
 
 #define INTERNAL_FILE	@"ivelocity.vm"
+#define YYDEBUG 1
 
 //StatementBlock	*GlobalStatement;
 LocalCache	*currentLocalCache;
 
 void initWithTemplateFile(NSString *filename, id iv)
 {
+	
+#if YYDEBUG
+	yydebug = 0; // set to 1 for open yacc debug output, evanjoe
+#endif
+	
 	currentLocalCache = (LocalCache *)iv;
 	
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
@@ -46,6 +55,10 @@ void initWithTemplateFile(NSString *filename, id iv)
 
 void initLex(NSString *strTemplate, id iv)
 {
+#if YYDEBUG
+	yydebug = 0; // set to 1 for open yacc debug output, evanjoe
+#endif
+	
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:INTERNAL_FILE];
 	FILE *fp = fopen([filePath UTF8String], "w");
 	fprintf(fp, "%s", [strTemplate UTF8String]);
@@ -98,6 +111,15 @@ int createNumberBlock(int pNumber)
 {
 	NSString *text = (NSString *)pNumber;
 	NumberBlock *block = [[NumberBlock alloc] initWithString:text];
+	[text release];
+	
+	return (int)block;
+}
+
+int createStringBlock(int pString)
+{
+	NSString *text = (NSString *)pString;
+	StringBlock *block = [[StringBlock alloc] initWithString:text];
 	[text release];
 	
 	return (int)block;
@@ -203,4 +225,12 @@ int createExpSubBlock(int pExpBlock, int pNumber)
 	return (int)block;
 }
 
-
+int createExpCompareBlock(int pExpBlock1,int type, int pExpBlock2)
+{
+	id left = (id)pExpBlock1;
+	id right = (id)pExpBlock2;
+	ExpCompBlock *block = [[ExpCompBlock alloc] initWithLeft:left 
+													  withOp:(COMP_TYPE)type 
+												   withRight:right];
+	return (int)block;
+}

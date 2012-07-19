@@ -19,6 +19,9 @@
 		BC41F85015703887006B8CC7 /* TestWeb4.html in Resources */ = {isa = PBXBuildFile; fileRef = BC41F84F15703887006B8CC7 /* TestWeb4.html */; };
 		BC752F2B1470C8EB00B5C858 /* TestData3.json in Resources */ = {isa = PBXBuildFile; fileRef = BC752EAF1470C6E300B5C858 /* TestData3.json */; };
 		BC752F2C1470C8EE00B5C858 /* TestWeb3.html in Resources */ = {isa = PBXBuildFile; fileRef = BC752EB01470C70700B5C858 /* TestWeb3.html */; };
+		BC7E407215B7F8E700AD4998 /* ExpCompBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = BC7E407015B7F8E700AD4998 /* ExpCompBlock.h */; };
+		BC7E407315B7F8E700AD4998 /* ExpCompBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E407115B7F8E700AD4998 /* ExpCompBlock.m */; };
+		BC7E407415B7F8E700AD4998 /* ExpCompBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7E407115B7F8E700AD4998 /* ExpCompBlock.m */; };
 		BC86726E141B1616008F05EB /* ivelocity.l in Sources */ = {isa = PBXBuildFile; fileRef = BC86726D141B1616008F05EB /* ivelocity.l */; };
 		BC86726F141B1616008F05EB /* ivelocity.l in Sources */ = {isa = PBXBuildFile; fileRef = BC86726D141B1616008F05EB /* ivelocity.l */; };
 		BC86728F141B18E8008F05EB /* LexLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BC86728C141B18E8008F05EB /* LexLayer.h */; };
@@ -62,6 +65,11 @@
 		BCAAA9571421964F00C83895 /* LocalCache.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAAA9551421964F00C83895 /* LocalCache.h */; };
 		BCAAA9581421964F00C83895 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA9561421964F00C83895 /* LocalCache.m */; };
 		BCAAA9591421964F00C83895 /* LocalCache.m in Sources */ = {isa = PBXBuildFile; fileRef = BCAAA9561421964F00C83895 /* LocalCache.m */; };
+		BCBDCA4F15A0643E008AED27 /* TestWeb5.html in Resources */ = {isa = PBXBuildFile; fileRef = BCBDCA4E15A0643E008AED27 /* TestWeb5.html */; };
+		BCBDCA5115A06462008AED27 /* TestData5.json in Resources */ = {isa = PBXBuildFile; fileRef = BCBDCA5015A06462008AED27 /* TestData5.json */; };
+		BCBDCA5515A06B12008AED27 /* StringBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDCA5315A06B12008AED27 /* StringBlock.m */; };
+		BCBDCA5715A070AA008AED27 /* StringBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBDCA5315A06B12008AED27 /* StringBlock.m */; };
+		BCBDCA5915A0710C008AED27 /* StringBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = BCBDCA5815A0710C008AED27 /* StringBlock.h */; };
 		BCFC081214209D0400FE1554 /* TestWeb2.html in Resources */ = {isa = PBXBuildFile; fileRef = BCFC081114209D0400FE1554 /* TestWeb2.html */; };
 		BCFC082A14209E6000FE1554 /* TestData2.json in Resources */ = {isa = PBXBuildFile; fileRef = BCFC081714209DA200FE1554 /* TestData2.json */; };
 /* End PBXBuildFile section */
@@ -87,6 +95,8 @@
 		BC70EB26141A00B50088720F /* README.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.TXT; sourceTree = "<group>"; };
 		BC752EAF1470C6E300B5C858 /* TestData3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData3.json; sourceTree = "<group>"; };
 		BC752EB01470C70700B5C858 /* TestWeb3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb3.html; sourceTree = "<group>"; };
+		BC7E407015B7F8E700AD4998 /* ExpCompBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpCompBlock.h; path = Engine/src/ExpCompBlock.h; sourceTree = "<group>"; };
+		BC7E407115B7F8E700AD4998 /* ExpCompBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpCompBlock.m; path = Engine/src/ExpCompBlock.m; sourceTree = "<group>"; };
 		BC86726D141B1616008F05EB /* ivelocity.l */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.lex; name = ivelocity.l; path = Engine/rule/ivelocity.l; sourceTree = "<group>"; };
 		BC86728C141B18E8008F05EB /* LexLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LexLayer.h; sourceTree = "<group>"; };
 		BC86728D141B18E8008F05EB /* LexLayer.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LexLayer.c; sourceTree = "<group>"; };
@@ -144,6 +154,10 @@
 		BCAAA90D14218AEF00C83895 /* CHANGELOG.TXT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.TXT; sourceTree = "<group>"; };
 		BCAAA9551421964F00C83895 /* LocalCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCache.h; sourceTree = "<group>"; };
 		BCAAA9561421964F00C83895 /* LocalCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCache.m; sourceTree = "<group>"; };
+		BCBDCA4E15A0643E008AED27 /* TestWeb5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb5.html; sourceTree = "<group>"; };
+		BCBDCA5015A06462008AED27 /* TestData5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestData5.json; sourceTree = "<group>"; };
+		BCBDCA5315A06B12008AED27 /* StringBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringBlock.m; path = Engine/src/StringBlock.m; sourceTree = "<group>"; };
+		BCBDCA5815A0710C008AED27 /* StringBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringBlock.h; path = Engine/inc/StringBlock.h; sourceTree = "<group>"; };
 		BCEEAE0C1432B0D400EB7E58 /* createlib.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = createlib.sh; sourceTree = "<group>"; };
 		BCFC081114209D0400FE1554 /* TestWeb2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWeb2.html; sourceTree = "<group>"; };
 		BCFC081714209DA200FE1554 /* TestData2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData2.json; sourceTree = "<group>"; };
@@ -235,6 +249,8 @@
 				BCFC081714209DA200FE1554 /* TestData2.json */,
 				BC41F84D157037FE006B8CC7 /* TestData4.json */,
 				BC41F84F15703887006B8CC7 /* TestWeb4.html */,
+				BCBDCA4E15A0643E008AED27 /* TestWeb5.html */,
+				BCBDCA5015A06462008AED27 /* TestData5.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,6 +282,7 @@
 				BC8909831419B23D008FC54D /* ExpSubBlock.h */,
 				BC8909841419B23D008FC54D /* ExpAddBlock.h */,
 				BC8909851419B23D008FC54D /* StatementBlock.h */,
+				BCBDCA5815A0710C008AED27 /* StringBlock.h */,
 				BC89095F1419B22F008FC54D /* CmdForeachBlock.m */,
 				BC8909601419B22F008FC54D /* NameLevel.m */,
 				BC8909621419B22F008FC54D /* TransLayer.c */,
@@ -280,6 +297,9 @@
 				BC89096B1419B22F008FC54D /* StatementBlock.m */,
 				BCAAA9551421964F00C83895 /* LocalCache.h */,
 				BCAAA9561421964F00C83895 /* LocalCache.m */,
+				BCBDCA5315A06B12008AED27 /* StringBlock.m */,
+				BC7E407015B7F8E700AD4998 /* ExpCompBlock.h */,
+				BC7E407115B7F8E700AD4998 /* ExpCompBlock.m */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -347,6 +367,8 @@
 			files = (
 				BC86728F141B18E8008F05EB /* LexLayer.h in Headers */,
 				BCAAA9571421964F00C83895 /* LocalCache.h in Headers */,
+				BCBDCA5915A0710C008AED27 /* StringBlock.h in Headers */,
+				BC7E407215B7F8E700AD4998 /* ExpCompBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +415,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iVelocity" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -431,6 +453,8 @@
 				BCFC081214209D0400FE1554 /* TestWeb2.html in Resources */,
 				BC41F84E157037FE006B8CC7 /* TestData4.json in Resources */,
 				BC41F85015703887006B8CC7 /* TestWeb4.html in Resources */,
+				BCBDCA4F15A0643E008AED27 /* TestWeb5.html in Resources */,
+				BCBDCA5115A06462008AED27 /* TestData5.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCBDCA5715A070AA008AED27 /* StringBlock.m in Sources */,
 				BC890AED1419B6A5008FC54D /* iVelocityTestCase.m in Sources */,
 				BC890AEE1419B6A5008FC54D /* YaccTestCase.m in Sources */,
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
@@ -466,6 +491,7 @@
 				BC8C7DE5141F037400009842 /* StatementBlock.m in Sources */,
 				BC86726E141B1616008F05EB /* ivelocity.l in Sources */,
 				BCAAA9591421964F00C83895 /* LocalCache.m in Sources */,
+				BC7E407315B7F8E700AD4998 /* ExpCompBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +514,8 @@
 				BC8909CF1419B47B008FC54D /* StatementBlock.m in Sources */,
 				BC86726F141B1616008F05EB /* ivelocity.l in Sources */,
 				BCAAA9581421964F00C83895 /* LocalCache.m in Sources */,
+				BCBDCA5515A06B12008AED27 /* StringBlock.m in Sources */,
+				BC7E407415B7F8E700AD4998 /* ExpCompBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
