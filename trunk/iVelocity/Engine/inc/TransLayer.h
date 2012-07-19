@@ -29,6 +29,7 @@ extern int createStatement(int pBlock);
 
 extern int createTextBlock(int pText);
 extern int createNumberBlock(int pNumber);
+extern int createStringBlock(int pNumber);
 extern int createNameBlock(int pName);
 
 extern int mergeTextStatement(int pText, int pStatement);
@@ -42,3 +43,7 @@ extern int createForeachCommand(int pName, int pNameLib, int pStatement);
 
 extern int createExpAddBlock(int pExpBlock, int pNumber);
 extern int createExpSubBlock(int pExpBlock, int pNumber);
+
+extern int createExpCompareBlock(int pExpBlock1,int type, int pExpBlock2);
+
+

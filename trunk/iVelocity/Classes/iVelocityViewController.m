@@ -129,10 +129,33 @@
 	[velocity release];
      */
     
+    /*
     NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb4.html"];
 	
 	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb4.html" forceFlush:YES];
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData4.json"];
+	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
+														   encoding: NSUTF8StringEncoding 
+															  error: nil];
+	NSMutableDictionary *jsonValue = [jsonString JSONValue];
+	NSMutableString *strResult = [[NSMutableString alloc] init];
+	
+	[velocity renderBlockWithData:jsonValue 
+                     returnString:strResult];
+	
+	[webView loadHTMLString:strResult baseURL:[NSURL fileURLWithPath:filePath2]];
+	
+	
+	[jsonString release];
+	[strResult release];
+	[velocity release];
+     */
+	
+    
+    NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb5.html"];
+	
+	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb5.html" forceFlush:YES];
+	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData5.json"];
 	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
 														   encoding: NSUTF8StringEncoding 
 															  error: nil];

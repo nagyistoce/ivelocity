@@ -16,22 +16,13 @@
 
 #import <Foundation/Foundation.h>
 #import "CoreInterface.h"
-#import "NameLevel.h"
 
-@interface NameBlock : NSObject<Render, Expression, Name,Block> {
-
-	ValueType valueType; //! set when runtime.
-	id value;			 //! set when runtime.
-	NSString *name;		 //! set when runtime.
-	
-	NameLevel *nameLevel;
+@interface StringBlock : NSObject<Expression,Block> {
+    
+	NSMutableString *strValue;
 }
 
-+ (ValueType)checkValueType:(id)value;
-- (id) initWithName:(NSString *)n;
-- (void) initNameWithData:(NSMutableDictionary *)dictionaryData;
-- (void) reset;
-
-- (NSString *) getNamePrefix;
+- (id) initWithString:(NSString *)textValue;
 
 @end
+
