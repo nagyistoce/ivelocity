@@ -154,7 +154,9 @@
     
     NSString *filePath2 = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestWeb5.html"];
 	
-	iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb5.html" forceFlush:YES];
+	//iVelocity *velocity = [[iVelocity alloc] initWithFile:@"TestWeb5.html" forceFlush:YES];
+	iVelocity *velocity = [[iVelocity alloc] initWithFile:filePath2 forceFlush:YES];
+	
 	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestData5.json"];
 	NSString *jsonString = [[NSString alloc] initWithContentsOfFile: filePath
 														   encoding: NSUTF8StringEncoding 

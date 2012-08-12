@@ -48,7 +48,21 @@ void initWithTemplateFile(NSString *filename, id iv)
 	
 	currentLocalCache = (LocalCache *)iv;
 	
-	NSString *filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
+	// check the file is absolute or not. add by Evan Joe 2012.8.12
+	
+	NSString *filePath;
+	
+	if ([filename characterAtIndex:0] == '/') {
+		
+		// this is absolute path
+		filePath = filename;
+		
+	} else {
+		
+		// this is relative path
+		
+		filePath = [[ [NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:filename];
+	}
 	
 	yyin = fopen([filePath UTF8String], "r");
 }
